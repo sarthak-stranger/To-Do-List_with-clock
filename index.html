@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="icon" href="/img/WhatsApp_Image_2023-09-20_at_22.40.40-removebg-preview.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!---------------------------------Background Video------------------------------------------->
+
+    <video src="img/pexels-taryn-elliott-5271930 (1080p).mp4" autoplay loop muted></video>
+     
+
+    <!-------------------------------Analog Clock------------------------------->
+
+    <div class="clock_container">
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+         
+    </div>
+    
+
+    <!-------------------------------To Do List Background------------------------------------------->
+
+    <div class="container">
+        <h1>To Do List  <img src="img/WhatsApp_Image_2023-09-20_at_22.40.40-removebg-preview.png"> </h1>
+        <div class="taskbar">
+            <input type="text" id="input-box" placeholder="Enter Your Task" maxlength="48">
+            <button id="button" onclick = "addTask()">Add</button>
+        </div>
+        <ul id="task-list">
+            <!-- <li class="checked">Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li> !-->
+        </ul> 
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+*{
+    margin: 0px;
+    padding: 0px;  
+    font-family: 'Poppins', sans-serif;
+}
+
+ video{ 
+  position: fixed;
+  right: 0px;
+  top: 0px; 
+  min-width: 100%;
+  min-height: 100%;
+  transition: ease-in-out;
+  z-index: -10000;
+ }
+
+ /*----------------------Form Background----------------------------*/
+ .container{
+    border: 0.5px solid rgb(231, 223, 105);
+    background: rgb(246, 246, 246); 
+    width: 90%;
+    max-width: 620px;
+    min-height: 420px;
+    position: absolute;
+    top: 100px;
+    left: 22vw; 
+    padding: 30px;
+    border-radius: 15px; 
+    box-shadow: 25px 25px 75px rgba(213, 202, 51, 0.356),
+    10px 10px 70px rgba(188, 179, 49, 0.291),
+    inset 5px 5px 10px rgba(195, 173, 116, 0.188),
+    inset 5px 5px 20px rgba(200, 198, 192, 0.371),
+    inset -5px -5px 15px rgba(206, 176, 42, 0.306);
+ }
+ 
+ /*----------------------Form Heading & Img part ----------------------------*/
+  .container h1{
+    display: flex;  
+    align-content: center;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 0px 190px 0px;
+    
+  }
+
+  .container h1 img{
+    height: 45px;
+    margin-left: 10px;
+  }
+
+  /*------------------------- Task Input Box -------------------------------*/
+
+  .taskbar{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(213, 213, 213);
+    border-radius: 40px;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    
+  }
+
+  input{
+    flex:1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 15px;
+    font-weight:bolder; 
+    font-size: 20px;
+  } 
+
+  button{
+    border: 0;
+    outline:0;
+    background: rgb(52, 189, 37);
+    color: #fff;
+    font-size: 17px;
+    font-weight: 900;
+    padding : 20px 50px; 
+    border-radius: 40px;
+    cursor: pointer;
+  }
+
+ /* --------------------------------- Tasks List -------------------------------------- */
+
+  ul li{
+    list-style: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none; 
+    position: relative;
+    padding: 11px 30px 11px 60px;
+    overflow: hidden; 
+    max-width: 500px; 
+  }
+
+  /* ----------------------------- Before task list checkbox -------------------------------- */
+
+  ul li::before{
+    content: '';
+    position: absolute;
+    height: 31px;
+    width: 31px;
+    border-radius: 50%;
+    background-image: url(img/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 9px;
+    left: 18px;
+  }
+
+  ul li.checked{
+    text-decoration: line-through;
+    color: rgb(125, 125, 125);
+    
+  }
+
+  ul li.checked::before{
+    background-image: url(img/checked.png);
+  }
+
+  /* ----------------------------Delete cross ------------------------------- */
+
+  ul li span{
+        position: absolute;
+        right: 1px; 
+        width: 30px;
+        height: 30px;
+        font-size: 37px;
+        line-height: 30px;
+        text-align: center;
+        color: rgb(111, 111, 111);
+        border-radius: 50%;  
+
+  }
+
+  ul li span:hover{
+    background: rgb(220, 220, 220); 
+  }
+
+ 
+  /*------------------------------Clock------------------------------*/
+
+  .clock_container{
+    position: relative;
+    background: url(img/pngwing.com.png) no-repeat;
+     background-size: contain; 
+    height: 28vh;
+    width: 14vw;  
+    margin-top: 4%;
+    margin-left: 80%;
+  }
+
+  #hour ,#minute ,#second {
+     position:absolute;
+     background: black;
+     transform-origin: bottom;
+     border-radius: 10px;
+     transform-origin: bottom;
+
+  }
+
+  #hour{
+    width: 2.5%;
+    height: 28%;
+    right: 49%;
+    top: 23%; 
+    opacity: 0.9;  
+  } 
+
+  #minute{
+    width: 2%;
+    height: 30%;
+    right: 49.2%;
+    top: 20%;
+    opacity: 0.8; 
+  }
+ 
+   #second{
+    width: 1.5%;
+    height: 36.5%;
+    right: 49.8%;
+    top: 14%;
+    background: red; 
+    opacity: 0.8; 
+  } 
+
+  
